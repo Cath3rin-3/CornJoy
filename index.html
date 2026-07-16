@@ -11,126 +11,74 @@
 <style>
 
 body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#FFFBEA;
-    color:#333;
+margin:0;
+font-family:Arial,sans-serif;
+background:#FFFBEA;
+color:#333;
 }
-
 
 header{
-    background:#FFD54F;
-    padding:50px 20px;
-    text-align:center;
+background:#FFD54F;
+padding:40px 20px;
+text-align:center;
 }
 
-
-header h1{
-    font-size:55px;
-    margin:0;
+h1{
+font-size:50px;
 }
-
-
-header p{
-    font-size:22px;
-}
-
 
 .button{
-    display:inline-block;
-    background:#28a745;
-    color:white;
-    padding:15px 35px;
-    border-radius:30px;
-    text-decoration:none;
-    font-size:18px;
+background:#28a745;
+color:white;
+padding:12px 25px;
+border-radius:30px;
+border:none;
+text-decoration:none;
+cursor:pointer;
 }
-
 
 section{
-
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-
+max-width:900px;
+margin:auto;
+padding:30px 20px;
 }
 
-
-h2{
-
-    text-align:center;
-    color:#5C8A00;
-
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:20px;
+box-shadow:0 5px 15px #ddd;
 }
 
+input,textarea,select{
 
-.photo-box{
-
-    background:white;
-    height:250px;
-    border-radius:20px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 5px 15px #ddd;
-    margin-bottom:30px;
+width:90%;
+padding:12px;
+margin:8px;
+border-radius:10px;
+border:1px solid #ccc;
 
 }
-
-
-
-.product{
-
-    background:white;
-    padding:25px;
-    margin:20px 0;
-    border-radius:20px;
-    box-shadow:0 5px 15px #ddd;
-
-}
-
-
-.price{
-
-    color:#E67E22;
-    font-size:22px;
-    font-weight:bold;
-
-}
-
-
-.feature{
-
-    background:#F1FFD6;
-    padding:20px;
-    margin:15px 0;
-    border-radius:15px;
-
-}
-
 
 .review{
 
-    background:white;
-    padding:20px;
-    margin:20px 0;
-    border-radius:15px;
-    border-left:6px solid #FFD54F;
-    box-shadow:0 5px 10px #ddd;
+background:white;
+padding:20px;
+margin:15px 0;
+border-left:5px solid #FFD54F;
+border-radius:15px;
 
 }
-
-
 
 footer{
 
-    background:#5C8A00;
-    color:white;
-    text-align:center;
-    padding:30px;
+background:#5C8A00;
+color:white;
+padding:25px;
+text-align:center;
 
 }
-
 
 </style>
 
@@ -144,26 +92,22 @@ footer{
 
 <h1>🌽 Corn Joy 🌽</h1>
 
-<p>
-Fresh Corn Supplier & Ready-to-Eat Sweet Corn
-</p>
+<h2>
+Fresh Sweet Corn
+</h2>
 
 <p>
 新鲜玉蜀黍供应 · 香甜即食玉蜀黍
 </p>
 
 
-<br>
-
-
-<a class="button" 
+<a class="button"
 href="https://wa.me/60162288778">
 
-Order WhatsApp
+WhatsApp Order
 立即购买
 
 </a>
-
 
 </header>
 
@@ -172,162 +116,90 @@ Order WhatsApp
 <section>
 
 
-<div class="photo-box">
-
-🌽 Your Corn Photo Here
-
-</div>
-
-
+<div class="card">
 
 <h2>
-Why Choose Corn Joy?
-<br>
-为什么选择 Corn Joy？
+🌽 Price 价格
 </h2>
-
-
-<div class="feature">
-
-🌽 Fresh Quality  
-<br>
-精选新鲜玉蜀黍
-
-</div>
-
-
-<div class="feature">
-
-✨ Sweet & Delicious
-<br>
-自然香甜，美味可口
-
-</div>
-
-
-<div class="feature">
-
-❤️ Perfect For Family & Events
-<br>
-适合家庭分享、聚会及活动
-
-</div>
-
-
-
-
-
-<h2>
-Our Products
-<br>
-我们的产品
-</h2>
-
-
-
-<div class="product">
-
-<h3>
-🌽 Fresh Corn
-</h3>
 
 <p>
-Fresh corn supply for cooking or selling.
-<br>
-新鲜玉蜀黍供应，可自行烹煮或销售。
+1支 / 1 Piece : RM2.80
 </p>
-
-
-</div>
-
-
-
-
-<div class="product">
-
-<h3>
-🌽 Ready-to-Eat Sweet Corn
-</h3>
 
 <p>
-Sweet and ready to enjoy.
-<br>
-香甜即食，方便享用。
+3支 / 3 Pieces : RM8.00
 </p>
 
+<p>
+5支 / 5 Pieces : RM12.50
+</p>
 
 </div>
 
 
 
+
+<div class="card">
 
 
 <h2>
-Price
+📝 Leave Review
 <br>
-价格
+留下评价
 </h2>
 
 
-
-<div class="product">
-
-<p class="price">
-
-1 Piece / 一支  
-RM2.80
-
-</p>
+<input id="name"
+placeholder="Name 姓名">
 
 
-<p class="price">
+<select id="rating">
 
-3 Pieces / 三支  
-RM8.00
+<option>
+★★★★★
+</option>
 
-</p>
+<option>
+★★★★
+</option>
+
+<option>
+★★★
+</option>
+
+</select>
 
 
-<p class="price">
 
-5 Pieces / 五支  
-RM12.50
+<textarea id="review"
+placeholder="Your review 你的评价">
+</textarea>
 
-</p>
+
+<br>
+
+
+<button class="button"
+onclick="submitReview()">
+
+Submit
+提交
+
+</button>
 
 
 </div>
 
 
 
-
-
-
 <h2>
-⭐⭐⭐⭐⭐
-Customer Reviews
+⭐⭐⭐⭐⭐ Customer Reviews
 <br>
 顾客评价
-
 </h2>
 
 
-
-<div class="review">
-
-★★★★★
-
-<br>
-
-"Very sweet and fresh!
-Will buy again."
-
-<br><br>
-
-"非常香甜新鲜，会再次购买！"
-
-</div>
-
+<div id="reviews">
 
 
 <div class="review">
@@ -336,30 +208,12 @@ Will buy again."
 
 <br>
 
-"Family loves it."
-
-<br><br>
-
-"家人都很喜欢。"
+Welcome to Corn Joy!
 
 </div>
 
 
-
-<div class="review">
-
-★★★★★
-
-<br>
-
-"Highly recommended."
-
-<br><br>
-
-"非常推荐。"
-
 </div>
-
 
 
 
@@ -367,13 +221,7 @@ Will buy again."
 
 
 
-
 <footer>
-
-<h3>
-Contact Corn Joy
-</h3>
-
 
 📱 WhatsApp / Phone
 
@@ -381,16 +229,60 @@ Contact Corn Joy
 
 016-2288778
 
-
 <br><br>
 
-Facebook | Instagram
-<br>
-Coming Soon
-
+Facebook | Instagram Coming Soon
 
 </footer>
 
+
+
+
+
+<script>
+
+
+function submitReview(){
+
+
+let data={
+
+name:document.getElementById("name").value,
+
+rating:document.getElementById("rating").value,
+
+review:document.getElementById("review").value
+
+};
+
+
+
+fetch(
+"https://script.google.com/macros/s/AKfycbxJ6phQp-wKe-ZRM8wuVJSSvqup50KFjrpWbFl_50F1J3smxArowNCQKzlAN9Y8qoov/exec",
+
+{
+
+method:"POST",
+
+body:JSON.stringify(data)
+
+}
+
+)
+
+
+.then(()=>{
+
+alert("Thank you! 谢谢您的评价 ❤️");
+
+
+});
+
+
+}
+
+
+</script>
 
 
 </body>
