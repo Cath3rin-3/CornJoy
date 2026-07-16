@@ -19,13 +19,14 @@ color:#333;
 
 header{
 background:#FFD54F;
-padding:45px 20px;
+padding:50px 20px;
 text-align:center;
 }
 
 header h1{
-font-size:50px;
+font-size:52px;
 margin:0;
+color:#5C8A00;
 }
 
 header p{
@@ -33,57 +34,96 @@ font-size:20px;
 }
 
 .button{
+
+display:inline-block;
 background:#28a745;
 color:white;
-padding:12px 25px;
+padding:14px 30px;
 border-radius:30px;
-border:none;
-cursor:pointer;
 text-decoration:none;
+cursor:pointer;
+font-size:18px;
+
 }
 
+
 section{
+
 max-width:900px;
 margin:auto;
 padding:30px 20px;
+
 }
 
+
 .card{
+
 background:white;
 padding:25px;
 margin:20px 0;
 border-radius:20px;
-box-shadow:0 5px 15px #ddd;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
 }
 
-input,textarea,select{
+
+h2{
+
+text-align:center;
+color:#5C8A00;
+
+}
+
+
+.price{
+
+font-size:20px;
+font-weight:bold;
+color:#E67E22;
+
+}
+
+
+input,select,textarea{
 
 width:90%;
 padding:12px;
 margin:8px;
 border-radius:10px;
 border:1px solid #ccc;
+font-size:16px;
 
 }
+
+
+textarea{
+
+height:100px;
+
+}
+
 
 .review{
 
 background:white;
 padding:20px;
 margin:15px 0;
-border-left:5px solid #FFD54F;
+border-left:6px solid #FFD54F;
 border-radius:15px;
+box-shadow:0 3px 10px #ddd;
 
 }
+
 
 footer{
 
 background:#5C8A00;
 color:white;
 text-align:center;
-padding:25px;
+padding:30px;
 
 }
+
 
 </style>
 
@@ -95,21 +135,30 @@ padding:25px;
 
 <header>
 
-<h1>🌽 Corn Joy 🌽</h1>
+
+<h1>
+🌽 Corn Joy 🌽
+</h1>
+
 
 <p>
 Fresh Sweet Corn Supplier
 </p>
+
 
 <p>
 新鲜玉蜀黍供应 · 香甜即食玉蜀黍
 </p>
 
 
+<br>
+
+
 <a class="button"
 href="https://wa.me/60162288778">
 
-WhatsApp Order
+📱 WhatsApp Order
+<br>
 立即购买
 
 </a>
@@ -124,23 +173,79 @@ WhatsApp Order
 
 <div class="card">
 
+
 <h2>
-🌽 Price 价格
+🌽 About Corn Joy
+<br>
+关于我们
 </h2>
 
 
-<p>1支 / 1 Piece : RM2.80</p>
+<p>
 
-<p>3支 / 3 Pieces : RM8.00</p>
+We provide fresh and delicious corn for families,
+events and daily enjoyment.
 
-<p>5支 / 5 Pieces : RM12.50</p>
+</p>
+
+
+<p>
+
+我们提供新鲜香甜玉蜀黍，
+适合家庭、聚会以及日常享用。
+
+</p>
 
 
 </div>
 
 
 
+
+
 <div class="card">
+
+
+<h2>
+🌽 Price 价格
+</h2>
+
+
+<p class="price">
+
+1 Piece / 一支
+
+RM2.80
+
+</p>
+
+
+<p class="price">
+
+3 Pieces / 三支
+
+RM8.00
+
+</p>
+
+
+<p class="price">
+
+5 Pieces / 五支
+
+RM12.50
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
 
 <h2>
 📝 Leave Review
@@ -149,26 +254,44 @@ WhatsApp Order
 </h2>
 
 
-<input id="name"
+<input 
+id="name"
 placeholder="Name 姓名">
 
 
 <select id="rating">
 
-<option>★★★★★</option>
 
-<option>★★★★</option>
+<option>
+★★★★★
+</option>
 
-<option>★★★</option>
 
-<option>★★</option>
+<option>
+★★★★
+</option>
 
-<option>★</option>
+
+<option>
+★★★
+</option>
+
+
+<option>
+★★
+</option>
+
+
+<option>
+★
+</option>
+
 
 </select>
 
 
-<textarea id="review"
+<textarea 
+id="review"
 placeholder="Your Review / 你的评价">
 </textarea>
 
@@ -176,11 +299,13 @@ placeholder="Your Review / 你的评价">
 <br>
 
 
-<button class="button"
+<button 
+class="button"
 onclick="submitReview()">
 
-Submit
-提交
+Submit Review
+<br>
+提交评价
 
 </button>
 
@@ -189,29 +314,32 @@ Submit
 
 
 
+
+
 <h2>
-⭐⭐⭐⭐⭐ Customer Reviews
+
+⭐⭐⭐⭐⭐
+
 <br>
+
+Customer Reviews
+
+<br>
+
 顾客评价
+
 </h2>
 
 
 <div id="reviews">
 
 
-<div class="review">
-
-★★★★★
-
-<br>
-
-Welcome to Corn Joy 🌽
-
-</div>
+<p>
+Loading reviews...
+</p>
 
 
 </div>
-
 
 
 </section>
@@ -222,6 +350,11 @@ Welcome to Corn Joy 🌽
 <footer>
 
 
+<h3>
+Contact Corn Joy
+</h3>
+
+
 📱 WhatsApp / Phone
 
 <br>
@@ -230,6 +363,7 @@ Welcome to Corn Joy 🌽
 
 
 <br><br>
+
 
 Facebook | Instagram
 
@@ -247,19 +381,25 @@ Coming Soon
 <script>
 
 
+// 提交顾客评价到 Google Sheet
+
 function submitReview(){
 
 
 let data={
 
+
 name:
 document.getElementById("name").value,
+
 
 rating:
 document.getElementById("rating").value,
 
+
 review:
 document.getElementById("review").value
+
 
 };
 
@@ -271,11 +411,15 @@ fetch(
 
 {
 
+
 method:"POST",
+
 
 body:JSON.stringify(data)
 
+
 }
+
 
 )
 
@@ -283,7 +427,19 @@ body:JSON.stringify(data)
 
 .then(()=>{
 
-alert("Thank you! 谢谢您的评价 ❤️");
+
+alert(
+"Thank you! 谢谢您的评价 ❤️"
+);
+
+
+document.getElementById("name").value="";
+
+document.getElementById("review").value="";
+
+
+loadReviews();
+
 
 });
 
@@ -291,7 +447,107 @@ alert("Thank you! 谢谢您的评价 ❤️");
 }
 
 
+
+
+
+
+// 从 Google Sheet 读取评价
+
+
+function loadReviews(){
+
+
+
+fetch(
+
+"https://script.google.com/macros/s/AKfycbxJ6phQp-wKe-ZRM8wuVJSSvqup50KFjrpWbFl_50F1J3smxArowNCQKzlAN9Y8qoov/exec"
+
+)
+
+
+
+.then(response => response.json())
+
+
+.then(data=>{
+
+
+let box=document.getElementById("reviews");
+
+
+box.innerHTML="";
+
+
+
+if(data.length===0){
+
+
+box.innerHTML=
+
+"<div class='review'>No reviews yet.<br>还没有评价。</div>";
+
+
+return;
+
+
+}
+
+
+
+
+data.reverse().forEach(row=>{
+
+
+box.innerHTML +=
+
+
+
+`
+
+<div class="review">
+
+
+${row[1]}
+
+
+<br><br>
+
+
+${row[2]}
+
+
+<br><br>
+
+
+- ${row[0]}
+
+
+</div>
+
+
+`;
+
+
+
+});
+
+
+});
+
+
+}
+
+
+
+
+// 页面打开自动加载评价
+
+loadReviews();
+
+
+
 </script>
+
 
 
 </body>
