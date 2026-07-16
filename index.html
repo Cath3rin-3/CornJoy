@@ -19,12 +19,17 @@ color:#333;
 
 header{
 background:#FFD54F;
-padding:40px 20px;
+padding:45px 20px;
 text-align:center;
 }
 
-h1{
+header h1{
 font-size:50px;
+margin:0;
+}
+
+header p{
+font-size:20px;
 }
 
 .button{
@@ -33,8 +38,8 @@ color:white;
 padding:12px 25px;
 border-radius:30px;
 border:none;
-text-decoration:none;
 cursor:pointer;
+text-decoration:none;
 }
 
 section{
@@ -45,7 +50,7 @@ padding:30px 20px;
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 margin:20px 0;
 border-radius:20px;
 box-shadow:0 5px 15px #ddd;
@@ -75,8 +80,8 @@ footer{
 
 background:#5C8A00;
 color:white;
-padding:25px;
 text-align:center;
+padding:25px;
 
 }
 
@@ -92,9 +97,9 @@ text-align:center;
 
 <h1>🌽 Corn Joy 🌽</h1>
 
-<h2>
-Fresh Sweet Corn
-</h2>
+<p>
+Fresh Sweet Corn Supplier
+</p>
 
 <p>
 新鲜玉蜀黍供应 · 香甜即食玉蜀黍
@@ -109,6 +114,7 @@ WhatsApp Order
 
 </a>
 
+
 </header>
 
 
@@ -122,25 +128,19 @@ WhatsApp Order
 🌽 Price 价格
 </h2>
 
-<p>
-1支 / 1 Piece : RM2.80
-</p>
 
-<p>
-3支 / 3 Pieces : RM8.00
-</p>
+<p>1支 / 1 Piece : RM2.80</p>
 
-<p>
-5支 / 5 Pieces : RM12.50
-</p>
+<p>3支 / 3 Pieces : RM8.00</p>
+
+<p>5支 / 5 Pieces : RM12.50</p>
+
 
 </div>
 
 
 
-
 <div class="card">
-
 
 <h2>
 📝 Leave Review
@@ -155,24 +155,21 @@ placeholder="Name 姓名">
 
 <select id="rating">
 
-<option>
-★★★★★
-</option>
+<option>★★★★★</option>
 
-<option>
-★★★★
-</option>
+<option>★★★★</option>
 
-<option>
-★★★
-</option>
+<option>★★★</option>
+
+<option>★★</option>
+
+<option>★</option>
 
 </select>
 
 
-
 <textarea id="review"
-placeholder="Your review 你的评价">
+placeholder="Your Review / 你的评价">
 </textarea>
 
 
@@ -208,7 +205,7 @@ Submit
 
 <br>
 
-Welcome to Corn Joy!
+Welcome to Corn Joy 🌽
 
 </div>
 
@@ -221,7 +218,9 @@ Welcome to Corn Joy!
 
 
 
+
 <footer>
+
 
 📱 WhatsApp / Phone
 
@@ -229,9 +228,15 @@ Welcome to Corn Joy!
 
 016-2288778
 
+
 <br><br>
 
-Facebook | Instagram Coming Soon
+Facebook | Instagram
+
+<br>
+
+Coming Soon
+
 
 </footer>
 
@@ -247,17 +252,21 @@ function submitReview(){
 
 let data={
 
-name:document.getElementById("name").value,
+name:
+document.getElementById("name").value,
 
-rating:document.getElementById("rating").value,
+rating:
+document.getElementById("rating").value,
 
-review:document.getElementById("review").value
+review:
+document.getElementById("review").value
 
 };
 
 
 
 fetch(
+
 "https://script.google.com/macros/s/AKfycbxJ6phQp-wKe-ZRM8wuVJSSvqup50KFjrpWbFl_50F1J3smxArowNCQKzlAN9Y8qoov/exec",
 
 {
@@ -271,10 +280,10 @@ body:JSON.stringify(data)
 )
 
 
+
 .then(()=>{
 
 alert("Thank you! 谢谢您的评价 ❤️");
-
 
 });
 
