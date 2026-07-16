@@ -73,11 +73,11 @@ border-radius:30px;
 
 text-decoration:none;
 
-font-size:18px;
-
 border:none;
 
 cursor:pointer;
+
+font-size:18px;
 
 }
 
@@ -133,28 +133,6 @@ color:#E67E22;
 
 
 
-.photo-box{
-
-height:250px;
-
-background:#eee;
-
-border-radius:20px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:28px;
-
-color:#777;
-
-}
-
-
-
 input,select,textarea{
 
 width:90%;
@@ -193,6 +171,8 @@ border-left:6px solid #FFD54F;
 
 border-radius:15px;
 
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
 }
 
 
@@ -202,6 +182,8 @@ border-radius:15px;
 max-width:100%;
 
 border-radius:15px;
+
+margin-top:15px;
 
 }
 
@@ -230,29 +212,27 @@ padding:30px;
 <body>
 
 
+
 <header>
 
 
 <h1>
-
 🌽 Corn Joy 🌽
-
 </h1>
 
 
 <p>
-
 Fresh Sweet Corn Supplier
-
 </p>
 
 
 <p>
-
 新鲜玉蜀黍供应 · 香甜即食玉蜀黍
-
 </p>
 
+
+
+<br>
 
 
 <a class="button"
@@ -264,19 +244,11 @@ href="https://wa.me/60162288778">
 </a>
 
 
-
 </header>
 
 
 
 <section>
-
-
-<div class="photo-box">
-
-🌽 Add Corn Photo Here
-
-</div>
 
 
 <div class="card">
@@ -308,6 +280,7 @@ Fresh sweet corn for families, events and daily enjoyment.
 
 
 </div>
+
 
 
 
@@ -370,39 +343,19 @@ placeholder="Name 姓名">
 <select id="rating">
 
 
-<option>
-
-★★★★★
-
-</option>
+<option>★★★★★</option>
 
 
-<option>
-
-★★★★
-
-</option>
+<option>★★★★</option>
 
 
-<option>
-
-★★★
-
-</option>
+<option>★★★</option>
 
 
-<option>
-
-★★
-
-</option>
+<option>★★</option>
 
 
-<option>
-
-★
-
-</option>
+<option>★</option>
 
 
 </select>
@@ -420,8 +373,6 @@ placeholder="Your Review / 你的评价">
 
 
 
-<br>
-
 
 <label>
 
@@ -430,9 +381,7 @@ placeholder="Your Review / 你的评价">
 </label>
 
 
-
 <br>
-
 
 
 <input
@@ -446,7 +395,6 @@ accept="image/*">
 
 
 <br><br>
-
 
 
 <button
@@ -473,6 +421,7 @@ Submit Review
 
 
 
+
 <h2>
 
 ⭐⭐⭐⭐⭐
@@ -492,15 +441,14 @@ Customer Reviews
 
 <div id="reviews">
 
-
 Loading reviews...
-
 
 </div>
 
 
 
 </section>
+
 
 
 
@@ -516,7 +464,6 @@ Contact Corn Joy
 </h3>
 
 
-
 📱 WhatsApp / Phone
 
 <br>
@@ -526,6 +473,7 @@ Contact Corn Joy
 
 
 <br><br>
+
 
 
 
@@ -545,6 +493,7 @@ target="_blank">
 
 
 
+
 <a class="button"
 
 href="https://www.instagram.com/cornjoy__/"
@@ -558,6 +507,7 @@ target="_blank">
 
 
 </footer>
+
 <script>
 
 
@@ -567,9 +517,9 @@ const scriptURL =
 
 
 
-// 提交评价 + 照片
 
 function submitReview(){
+
 
 
 let file = document.getElementById("photo").files[0];
@@ -580,17 +530,14 @@ let data = {
 
 
 name:
-
 document.getElementById("name").value,
 
 
 rating:
-
 document.getElementById("rating").value,
 
 
 review:
-
 document.getElementById("review").value,
 
 
@@ -604,23 +551,17 @@ photo:""
 if(file){
 
 
-let reader = new FileReader();
+
+resizeImage(file,function(image){
 
 
-
-reader.onload = function(){
-
-
-data.photo = reader.result;
+data.photo=image;
 
 
 sendData(data);
 
 
-};
-
-
-reader.readAsDataURL(file);
+});
 
 
 
@@ -635,6 +576,101 @@ sendData(data);
 
 
 }
+
+
+
+
+
+// 压缩照片
+
+function resizeImage(file,callback){
+
+
+let reader=new FileReader();
+
+
+
+reader.onload=function(event){
+
+
+let img=new Image();
+
+
+
+img.onload=function(){
+
+
+let canvas=document.createElement("canvas");
+
+
+let maxWidth=800;
+
+
+let scale=maxWidth/img.width;
+
+
+
+canvas.width=maxWidth;
+
+
+canvas.height=img.height*scale;
+
+
+
+let ctx=canvas.getContext("2d");
+
+
+
+ctx.drawImage(
+
+img,
+
+0,
+
+0,
+
+canvas.width,
+
+canvas.height
+
+);
+
+
+
+let compressed=canvas.toDataURL(
+
+"image/jpeg",
+
+0.7
+
+);
+
+
+
+callback(compressed);
+
+
+
+};
+
+
+
+img.src=event.target.result;
+
+
+
+};
+
+
+
+reader.readAsDataURL(file);
+
+
+
+}
+
+
+
 
 
 
@@ -668,12 +704,9 @@ alert(
 
 document.getElementById("name").value="";
 
-
 document.getElementById("review").value="";
 
-
 document.getElementById("photo").value="";
-
 
 
 loadReviews();
@@ -690,9 +723,8 @@ loadReviews();
 
 
 
-// 读取评价
-
 function loadReviews(){
+
 
 
 fetch(scriptURL)
@@ -704,10 +736,13 @@ fetch(scriptURL)
 .then(data=>{
 
 
+
 let box=document.getElementById("reviews");
 
 
+
 box.innerHTML="";
+
 
 
 
@@ -734,17 +769,26 @@ data.reverse().forEach(row=>{
 let photo="";
 
 
+
 if(row[4]){
 
 
 photo=
 
-`<br><img src="${row[4]}">`;
+`
+
+<br>
+
+<img src="${row[4]}">
+
+`;
 
 }
 
 
+
 box.innerHTML +=
+
 
 
 `
@@ -776,13 +820,17 @@ ${photo}
 `;
 
 
+
 });
 
 
+
 });
+
 
 
 }
+
 
 
 
@@ -796,6 +844,5 @@ loadReviews();
 
 
 </body>
-
 
 </html>
