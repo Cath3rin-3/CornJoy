@@ -1,31 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CornJoy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CornJoy</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#FFF8DC;
+    color:#333;
+}
+
+header{
+    background:#FFD54F;
+    padding:40px;
+    text-align:center;
+}
+
+header h1{
+    font-size:50px;
+    margin:0;
+}
+
+header p{
+    font-size:22px;
+}
+
+.button{
+    background:#28a745;
+    color:white;
+    padding:15px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:20px;
+}
+
+section{
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+}
+
+.product{
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.review{
+    background:#fff;
+    padding:20px;
+    border-left:6px solid gold;
+    margin:20px 0;
+}
+</style>
+
 </head>
-<body style="font-family:Arial;text-align:center;background:#FFF8DC;">
-    <h1>🌽 Welcome to CornJoy 🌽</h1>
 
-    <h2>Fresh Corn • Sweet Corn • Boiled Corn</h2>
+<body>
 
-    <p>Thank you for supporting CornJoy!</p>
+<header>
 
-    <h3>⭐⭐⭐⭐⭐ Customer Reviews ⭐⭐⭐⭐⭐</h3>
+<h1>🌽 CornJoy 🌽</h1>
 
-    <p>"Very sweet and fresh!"</p>
-    <p>"Best corn I've ever eaten."</p>
-    <p>"Highly recommended!"</p>
+<p>Fresh • Sweet • Boiled Corn</p>
 
-    <br>
+<br>
 
-    <h2>Leave Your Review</h2>
+<a class="button" href="https://wa.me/60123456789">
+Order on WhatsApp
+</a>
 
-    <input type="text" placeholder="Your Name"><br><br>
+</header>
 
-    <textarea rows="5" cols="40"
-    placeholder="Write your review here..."></textarea><br><br>
+<section>
 
-    <button>Submit</button>
+<h2>🌽 Our Products</h2>
+
+<div class="product">
+<h3>Fresh Corn</h3>
+<p>Fresh from factory.</p>
+</div>
+
+<div class="product">
+<h3>Sweet Corn</h3>
+<p>Sweet and juicy.</p>
+</div>
+
+<div class="product">
+<h3>Boiled Corn</h3>
+<p>Ready to eat.</p>
+</div>
+
+<h2>⭐⭐⭐⭐⭐ Customer Reviews</h2>
+
+<div class="review">
+★★★★★<br>
+Very sweet! Will buy again.
+</div>
+
+<div class="review">
+★★★★★<br>
+Best corn in town.
+</div>
+
+<div class="review">
+★★★★★<br>
+Highly recommended.
+</div>
+
+</section>
 
 </body>
+
 </html>
