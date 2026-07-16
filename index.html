@@ -4,43 +4,51 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Corn Joy 🌽</title>
 
+
 <style>
 
+
 body{
+
 margin:0;
+
 font-family:Arial,sans-serif;
+
 background:#FFFBEA;
+
 color:#333;
+
 }
+
 
 
 header{
 
 background:#FFD54F;
+
 padding:50px 20px;
+
 text-align:center;
 
 }
 
 
-.logo{
-
-font-size:60px;
-
-}
-
 
 header h1{
 
 font-size:52px;
-margin:10px 0;
+
+margin:10px;
+
 color:#5C8A00;
 
 }
+
 
 
 header p{
@@ -54,13 +62,22 @@ font-size:20px;
 .button{
 
 display:inline-block;
+
 background:#28a745;
+
 color:white;
+
 padding:14px 30px;
+
 border-radius:30px;
+
 text-decoration:none;
+
 font-size:18px;
-margin:5px;
+
+border:none;
+
+cursor:pointer;
 
 }
 
@@ -69,7 +86,9 @@ margin:5px;
 section{
 
 max-width:900px;
+
 margin:auto;
+
 padding:30px 20px;
 
 }
@@ -79,9 +98,13 @@ padding:30px 20px;
 .card{
 
 background:white;
+
 padding:25px;
+
 margin:20px 0;
+
 border-radius:20px;
+
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 
 }
@@ -91,22 +114,8 @@ box-shadow:0 5px 15px rgba(0,0,0,0.1);
 h2{
 
 text-align:center;
+
 color:#5C8A00;
-
-}
-
-
-
-.photo{
-
-height:250px;
-background:#f5f5f5;
-border-radius:20px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-color:#888;
 
 }
 
@@ -115,8 +124,32 @@ color:#888;
 .price{
 
 font-size:22px;
+
 font-weight:bold;
+
 color:#E67E22;
+
+}
+
+
+
+.photo-box{
+
+height:250px;
+
+background:#eee;
+
+border-radius:20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:28px;
+
+color:#777;
 
 }
 
@@ -125,10 +158,15 @@ color:#E67E22;
 input,select,textarea{
 
 width:90%;
+
 padding:12px;
+
 margin:8px;
+
 border-radius:10px;
+
 border:1px solid #ccc;
+
 font-size:16px;
 
 }
@@ -146,9 +184,23 @@ height:100px;
 .review{
 
 background:white;
+
 padding:20px;
+
 margin:15px 0;
+
 border-left:6px solid #FFD54F;
+
+border-radius:15px;
+
+}
+
+
+
+.review img{
+
+max-width:100%;
+
 border-radius:15px;
 
 }
@@ -158,17 +210,21 @@ border-radius:15px;
 footer{
 
 background:#5C8A00;
+
 color:white;
+
 text-align:center;
+
 padding:30px;
 
 }
 
 
+
 </style>
 
-</head>
 
+</head>
 
 
 <body>
@@ -177,23 +233,24 @@ padding:30px;
 <header>
 
 
-<div class="logo">
-🌽
-</div>
-
-
 <h1>
-Corn Joy
+
+🌽 Corn Joy 🌽
+
 </h1>
 
 
 <p>
+
 Fresh Sweet Corn Supplier
+
 </p>
 
 
 <p>
+
 新鲜玉蜀黍供应 · 香甜即食玉蜀黍
+
 </p>
 
 
@@ -207,23 +264,19 @@ href="https://wa.me/60162288778">
 </a>
 
 
-</header>
 
+</header>
 
 
 
 <section>
 
 
+<div class="photo-box">
 
-<div class="photo">
-
-🌽 Your Corn Photo Here
+🌽 Add Corn Photo Here
 
 </div>
-
-
-
 
 
 <div class="card">
@@ -242,23 +295,19 @@ href="https://wa.me/60162288778">
 
 <p>
 
-We provide fresh and delicious corn for families,
-events and daily enjoyment.
+Fresh sweet corn for families, events and daily enjoyment.
 
 </p>
 
 
 <p>
 
-我们提供新鲜香甜玉蜀黍，
-适合家庭、聚会以及日常享用。
+提供新鲜香甜玉蜀黍，适合家庭、聚会以及日常享用。
 
 </p>
 
 
 </div>
-
-
 
 
 
@@ -272,42 +321,28 @@ events and daily enjoyment.
 </h2>
 
 
-
 <p class="price">
 
-1 Piece / 一支
-
-RM2.80
+1 Piece / 一支 : RM2.80
 
 </p>
 
 
-
 <p class="price">
 
-3 Pieces / 三支
-
-RM8.00
+3 Pieces / 三支 : RM8.00
 
 </p>
 
 
-
 <p class="price">
 
-5 Pieces / 五支
-
-RM12.50
+5 Pieces / 五支 : RM12.50
 
 </p>
-
 
 
 </div>
-
-
-
-
 
 <div class="card">
 
@@ -323,9 +358,13 @@ RM12.50
 </h2>
 
 
-<input id="name"
+
+<input
+
+id="name"
 
 placeholder="Name 姓名">
+
 
 
 <select id="rating">
@@ -369,26 +408,68 @@ placeholder="Name 姓名">
 </select>
 
 
-<textarea id="review"
+
+
+<textarea
+
+id="review"
 
 placeholder="Your Review / 你的评价">
 
 </textarea>
 
 
+
 <br>
 
 
-<button class="button"
+<label>
+
+📷 Upload Photo 上传照片
+
+</label>
+
+
+
+<br>
+
+
+
+<input
+
+type="file"
+
+id="photo"
+
+accept="image/*">
+
+
+
+<br><br>
+
+
+
+<button
+
+class="button"
 
 onclick="submitReview()">
 
+
 Submit Review
+
+<br>
+
+提交评价
+
 
 </button>
 
 
+
 </div>
+
+
 
 
 
@@ -407,6 +488,8 @@ Customer Reviews
 </h2>
 
 
+
+
 <div id="reviews">
 
 
@@ -414,6 +497,10 @@ Loading reviews...
 
 
 </div>
+
+
+
+</section>
 
 
 
@@ -429,11 +516,13 @@ Contact Corn Joy
 </h3>
 
 
+
 📱 WhatsApp / Phone
 
 <br>
 
 016-2288778
+
 
 
 <br><br>
@@ -469,28 +558,25 @@ target="_blank">
 
 
 </footer>
-
-
-
-
-
-
-
 <script>
 
 
+const scriptURL = 
+"https://script.google.com/macros/s/AKfycbxJ6phQp-wKe-ZRM8wuVJSSvqup50KFjrpWbFl_50F1J3smxArowNCQKzlAN9Y8qoov/exec";
 
 
 
-// 提交评价到 Google Sheet
 
+// 提交评价 + 照片
 
 function submitReview(){
 
 
+let file = document.getElementById("photo").files[0];
 
-let data={
 
+
+let data = {
 
 
 name:
@@ -498,31 +584,66 @@ name:
 document.getElementById("name").value,
 
 
-
 rating:
 
 document.getElementById("rating").value,
 
 
-
 review:
 
-document.getElementById("review").value
+document.getElementById("review").value,
 
+
+photo:""
 
 
 };
 
 
 
+if(file){
 
 
-fetch(
-
-"https://script.google.com/macros/s/AKfycbxJ6phQp-wKe-ZRM8wuVJSSvqup50KFjrpWbFl_50F1J3smxArowNCQKzlAN9Y8qoov/exec",
+let reader = new FileReader();
 
 
-{
+
+reader.onload = function(){
+
+
+data.photo = reader.result;
+
+
+sendData(data);
+
+
+};
+
+
+reader.readAsDataURL(file);
+
+
+
+}else{
+
+
+sendData(data);
+
+
+}
+
+
+
+}
+
+
+
+
+function sendData(data){
+
+
+
+fetch(scriptURL,{
 
 
 method:"POST",
@@ -531,11 +652,7 @@ method:"POST",
 body:JSON.stringify(data)
 
 
-}
-
-
-)
-
+})
 
 
 .then(()=>{
@@ -555,6 +672,9 @@ document.getElementById("name").value="";
 document.getElementById("review").value="";
 
 
+document.getElementById("photo").value="";
+
+
 
 loadReviews();
 
@@ -563,27 +683,19 @@ loadReviews();
 });
 
 
-
 }
 
 
 
 
 
-// 自动读取 Google Sheet 评价
 
-
+// 读取评价
 
 function loadReviews(){
 
 
-
-fetch(
-
-"https://script.google.com/macros/s/AKfycbxJ6phQp-wKe-ZRM8wuVJSSvqup50KFjrpWbFl_50F1J3smxArowNCQKzlAN9Y8qoov/exec"
-
-)
-
+fetch(scriptURL)
 
 
 .then(response=>response.json())
@@ -592,24 +704,19 @@ fetch(
 .then(data=>{
 
 
-
 let box=document.getElementById("reviews");
-
 
 
 box.innerHTML="";
 
 
 
-
 if(data.length===0){
-
 
 
 box.innerHTML=
 
 "<div class='review'>No reviews yet.<br>还没有评价。</div>";
-
 
 
 return;
@@ -620,13 +727,24 @@ return;
 
 
 
-
 data.reverse().forEach(row=>{
 
 
 
-box.innerHTML +=
+let photo="";
 
+
+if(row[4]){
+
+
+photo=
+
+`<br><img src="${row[4]}">`;
+
+}
+
+
+box.innerHTML +=
 
 
 `
@@ -649,19 +767,19 @@ ${row[2]}
 - ${row[0]}
 
 
+${photo}
+
+
 </div>
 
 
 `;
 
 
-
 });
 
 
-
 });
-
 
 
 }
@@ -673,12 +791,11 @@ loadReviews();
 
 
 
-
-
 </script>
 
 
 
 </body>
+
 
 </html>
